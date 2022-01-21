@@ -5,6 +5,10 @@ const { index, detail } = require("../controller/UserController");
 const validationMiddleware = require("../middleware/validationMiddleware");
 const { validationRegister } = require("../validator/authValidator");
 
+router.get('/',(req,res)=>{
+  res.send('ok')
+})
+
 router.post(
   "/register",
   validationRegister,
